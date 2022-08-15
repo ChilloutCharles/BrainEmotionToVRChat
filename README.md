@@ -2,6 +2,9 @@
 
 This is my attempt at creating a machine learning algorithm to map brainwaves to emotional response using [Spotify's emotion metadata](https://developer.spotify.com/documentation/web-api/reference/#/operations/get-audio-features), [Pytorch's machine learning library](https://pytorch.org), [Brainflow's ONNX integration](https://brainflow.org/2022-06-09-onnx/), and [VRChat OSC](https://hello.vrchat.com/blog/vrchat-osc-for-avatars).
 
+## Appreciaton
+Thanks to [Nanao Ei](https://github.com/einanao) for applying their machine learning experience and create a better model!
+
 ## How it works
 
 1. Use Spotify to find songs with various emotion metadata
@@ -61,16 +64,13 @@ For example, relaxed can be described as a positive low energy emotion but excit
    1. Emotion Energy => `/avatar/parameters/osc_relax_avg`
    2. Emotion Positivity => `/avatar/parameters/osc_focus_avg`
 
-## Extras
+# Extras
 
+## Visualizing the model
 1. Complete the steps above for `Training the model`
 2. Run this command: `jupyter notebook`
 3. Open [http://localhost:8888/notebooks/viz-and-modeling.ipynb](http://localhost:8888/notebooks/viz-and-modeling.ipynb) in a web browser
 4. Run the cells in the notebook to visualize a [UMAP](https://arxiv.org/abs/1802.03426) embedding of the EEG signals in `dataset.pkl`. The notebook also contains code for training a random forest regression model, performing cross-validation, and computing training error. 
 
-## Caveats
-
-I suck at machine learning, so the custom machine learning model included is not performant at all. In the next coming months, I'll be updating this with the help of my more experienced friends to see where this could go. This is more proof of concept that the pipeline to add machine learning works!
-
-## Citations
+# Citations
 - [Valence Arousal Diagram](https://www.researchgate.net/figure/Two-dimensional-valence-arousal-space_fig1_304124018)
